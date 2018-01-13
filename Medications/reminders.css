@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.sub-headings {
+    margin: 1%;
+    text-align: center;
+}
+
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    margin: 1%;
+}
+
+.padding {
+    padding: 2%;
+}

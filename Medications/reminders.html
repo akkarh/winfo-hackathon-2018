@@ -9,12 +9,40 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="reminders.css">
     <title>dementiAid</title>
 </head>
 
 <body>
-    <div id="root"></div>
-    <p>dementiAid</p>
+    <div class="container">
+        <h2 class="sub-headings">Monday</h3>
+            <h3>Taken</h3>
+            <div class="card border border-success" style="width: 90%; margin: 1%">
+                <div class="card-body">
+                        Medication 1
+                </div>
+            </div>
+            <h3>Now</h3>
+            <div id="upcoming" class="card" style="width: 90%; margin: 1%" data-toggle="modal" data-target="#mark">
+                <div class="card-body">
+                    Medication 1
+                </div>
+            </div>
+            <div id="footer">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">I'm lost</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Emergency call</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <script src="reminders.js"></script>
 </body>
 
 </html>
