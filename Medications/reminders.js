@@ -7,12 +7,11 @@
 
     let medicines = [{ name: "Exelon", done: false }, { name: "Memantine", done: false }, { name: "Vitamin E", done: true }];
 
-    // 
     makeList();
 
     window.addEventListener("click", function (e) {
         console.log(e.target.getAttribute("class"));
-        if (e.target.getAttribute("class") === "card-body") {
+        if (e.target.getAttribute("class") === "card-body text-center") {
             makeList();
         }
     });
@@ -25,17 +24,17 @@
             let inner = document.createElement("div");
             card.classList.add("card");
             card.setAttribute("style", "width: 90%; margin: 1%");
-            inner.classList.add("card-body");
+            inner.classList.add("card-body", "text-center");
             inner.textContent = med.name;
             card.appendChild(inner);
             // changes color
             card.addEventListener("click", function () {
                 med.done = !med.done ? true : true;
-                card.classList.add("border", "border-success");
+                card.classList.add("bg-success", "text-white");
             });
 
             if (med.done === true) {
-                card.classList.add("border", "border-success");
+                card.classList.add("bg-success", "text-white");
                 taken.push(card);
             } else {
                 now.push(card);
@@ -62,9 +61,16 @@
     function updateUI(section, list) {
         let div = document.querySelector(section);
         div.innerHTML = "";
-        list.forEach(function (elem) {
-            div.appendChild(elem);
-        })
+        if (list.length === 0) {
+            let msg = document.createElement("p")
+            msg.classList.add("lead", "text-center");
+            msg.textContent = "You are done for the day!";
+            div.appendChild(msg);
+        } else {
+            list.forEach(function (elem) {
+                div.appendChild(elem);
+            })
+        }
     }
 
     // updateUI("#now", now);
