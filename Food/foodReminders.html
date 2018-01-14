@@ -15,11 +15,15 @@
 </head>
 
 <body>
-	<div class="container">
+	
 		<h2 class="sub-headings" style="margin-bottom: 15%;margin-top: 10%">Did I Eat?</h2>
-		
-		
-		<div class="card rcorners2 bg-danger text-white" id="meal1" style="width: 90%;margin: 5%;background-color: powderblue;">
+		<div class="container">
+		  <h3>Eaten</h3>
+      <div id="eaten"></div>
+      <h3>To Eat</h3>
+      <div id="toEat"></div>
+
+		<!-- <div class="card rcorners2 bg-danger text-white" id="meal1" style="width: 90%;margin: 5%;background-color: powderblue;">
   			<div class="card-body align">
   				Breakfast at 8:30 A.M.
   			</div>
@@ -41,16 +45,34 @@
   			<div class="card-body align">
   				Dinner at 6:30 P.M.
   			</div>
-  		</div>
+  		</div> -->
 	</div>
 	
-	<div class="navbar">
+	<!-- <div class="navbar">
   		<a href="#home">I'm Lost!</a>
   		<a href="#news">Home</a>
   		<a href="#contact">Emergency call</a>
-	</div>
+	</div> -->
+
+  <div class="navbar">
+  <a href="#lost" id="lost">
+    <img class="mobile-image bottomIcons" src="../images/lost.png" alt="Smiley face">
+    <br/>
+  <p>I'm Lost</p>
+  </a>
+  <a href="../index.html" id="home">
+    <img class="mobile-image bottomIcons" src="../images/home.png" alt="Smiley face">
+    <br/>
+  <p>Home</p>
+  </a>
+  <a href="#contact" id="call">
+    <img class="mobile-image bottomIcons" src="../images/call.png" alt="Smiley face">
+    <br/>
+  <p>Emergency Call</p>
+  </a>
+</div>
 	
-	<script src="foodReminders.js"></script>
+	<script src="foodRemindersNew.js"></script>
 </body>
 
 </html>
